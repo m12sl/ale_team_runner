@@ -12,7 +12,7 @@ function authorize() {
   local run_dir="$1"
   
   # read first line
-  line=$(${DIR}/check_password.pl pfile.txt 2>&1)
+  line=$(${DIR}/check_password.pl ${TEAM_DIR}/pfile.txt 2>&1)
   if [ $? -eq 0 ]; then
     # run ALE here
     if [[ ! "$line" =~ ^[a-z]*$ ]]; then
